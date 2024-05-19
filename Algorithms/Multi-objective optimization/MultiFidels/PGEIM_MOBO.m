@@ -102,7 +102,7 @@ classdef PGEIM_MOBO < ALGORITHM
                     sample_y = {PopObjLFScaled(:,i);PopObjHFScaled(:,i)};
                     HKmodel{i}= train_MLHK(sample_x,sample_y, optionsHK);
                 end
-            %%  Maximize PGEIM using the MOEA/D framework and select q candidate points
+            %%  Maximize PGEIM and select q candidate points
               disp('     Obtain infill samples')   
               SelectDecs = Opt_PGEIM(Problem,HKmodel,NDS_scaled,maxIter,q); 
             %% Aggregate data
